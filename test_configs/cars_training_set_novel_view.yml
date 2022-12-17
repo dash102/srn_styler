@@ -1,15 +1,15 @@
 # Configuration file for testing novel view synthesis on training set (see paper section 4, paragraph 4)
 # Datasets can be downloaded here: https://drive.google.com/drive/folders/1OkYgeRcIcLOFu1ft5mRODWNQaPJ0ps90
 
-data_root: ../data/cars_train_test # Path to cars training dataset.
-logging_root: ../logs/stylescorer/2x/bike_2x
+data_root: ./data/cars_train_test # Path to cars training dataset.
+logging_root: ./logs/stylescorer/cartoon_1x_noembed
 num_instances: 2151 # The number of cars that the model was trained with.
-checkpoint: ../logs/stylescorer/2x/bike_2x/checkpoints/epoch_0006_iter_175000.pth # The path to the trained checkpoint
+checkpoint: ./logs/stylescorer/cartoon_1x_noembed/checkpoints/epoch_0006_iter_175000.pth # The path to the trained checkpoint
 img_sidelength: 128
-batch_size: 64 # This is for a GPU with 48 GB of memory. Adapt accordingly for your GPU memory.
+batch_size: 128 # This is for a GPU with 48 GB of memory. Adapt accordingly for your GPU memory.
 
-prefix: a model of a
-description: bike
+prefix: a cartoon of a
+description: car
 suffix: on a white background
 
-pos_embed: True
+pos_embed: False
